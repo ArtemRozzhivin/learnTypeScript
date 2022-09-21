@@ -7,6 +7,7 @@ import Cart, { CartVariant } from './Component/Cart';
 import UserList from './Component/UserList/UserList';
 import { ITodo, IUser } from './types/types';
 import TodoItem from './Component/TotoItem/TodoItem';
+import EventExample from './Component/EventExample';
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="App">
+      <EventExample />
       <Cart
         onClick={(num) => console.log('Cart', num)}
         variant={CartVariant.primary}
